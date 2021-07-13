@@ -1,7 +1,13 @@
 import Head from "next/head";
-import { DarkModeButton } from "@/components/DarkModeButton";
+import useSWR from "swr";
+import { fetcher } from "utils/fetcher";
 
 export default function Home() {
+  const { data, error } = useSWR(
+    "https://jsonplaceholder.typicode.com/users",
+    fetcher
+  );
+
   return (
     <>
       <Head>
@@ -12,7 +18,11 @@ export default function Home() {
         <h1 className="text-2xl text-gray-800 dark:text-white">
           Nextjs, Tailwind Starter Template
         </h1>
-        <DarkModeButton />
+        {error ? (
+          <h3>Error Occured</h3>
+        ) : (
+          <p className="text-white">{data[0].name}</p>
+        )}
       </div>
     </>
   );
