@@ -33,6 +33,7 @@ type GeneratedUser = {
   following: number;
   created_at: Date;
   updated_at: Date;
+  message: string;
 };
 
 export type User = Nullable<GeneratedUser>;

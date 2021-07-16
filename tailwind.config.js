@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 function withOpacity(variableName) {
   return ({ opacityValue }) => {
     if (opacityValue !== undefined) {
@@ -13,6 +15,23 @@ module.exports = {
   darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
+      // ? Font Family
+      fontFamily: {
+        // montserrat: ["Montserrat", "sans-serif"],
+        merriweather: ["Merriweather", "sans-serif"],
+      },
+
+      // ? Extended Colors
+      colors: {
+        bluegray: colors.blueGray,
+        truegray: colors.trueGray,
+        emerald: colors.emerald,
+        sky: colors.sky,
+        violet: colors.violet,
+        fuchsia: colors.fuchsia,
+        rose: colors.rose,
+      },
+
       // ? Text
       textColor: {},
 
