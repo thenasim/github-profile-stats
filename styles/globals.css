@@ -9,19 +9,22 @@
     --bg-body-dark: 220.9, 39.3%, 11%;
   }
 
-  /* @font-face {
-    font-family: "Montserrat";
-    font-weight: 300;
-    src: url("/fonts/Montserrat-Light.ttf");
-  } */
-
   @font-face {
     font-family: "Merriweather";
     font-weight: 300;
     src: url("/fonts/Merriweather-Light.ttf");
   }
 
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    font-size: inherit;
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+  }
+
   body {
-    @apply bg-gray-200;
+    @apply bg-gradient-to-bl from-gray-800 to-gray-900;
   }
 }

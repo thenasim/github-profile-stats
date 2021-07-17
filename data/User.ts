@@ -1,6 +1,6 @@
 import { Nullable } from "./Nullable";
 
-type GeneratedUser = {
+export type User = {
   login: string;
   id: number;
   node_id: string;
@@ -34,5 +34,3 @@ type GeneratedUser = {
   created_at: Date;
   updated_at: Date;
 };
-
-export type User = Nullable<GeneratedUser>;

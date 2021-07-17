@@ -17,14 +17,11 @@ module.exports = {
     extend: {
       // ? Font Family
       fontFamily: {
-        // montserrat: ["Montserrat", "sans-serif"],
         merriweather: ["Merriweather", "sans-serif"],
       },
 
       // ? Extended Colors
       colors: {
-        bluegray: colors.blueGray,
-        truegray: colors.trueGray,
         emerald: colors.emerald,
         sky: colors.sky,
         violet: colors.violet,
