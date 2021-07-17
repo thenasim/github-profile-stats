@@ -1,5 +1,3 @@
-import { Nullable } from "./Nullable";
-
 export interface Owner {
   login: string;
   id: number;
@@ -29,7 +27,7 @@ export interface License {
   node_id: string;
 }
 
-interface GeneratedRepo {
+interface Repo {
   id: number;
   node_id: string;
   name: string;
@@ -105,5 +103,4 @@ interface GeneratedRepo {
   default_branch: string;
 }
 
-export type Repo = Nullable<GeneratedRepo>;
 export type Repos = Repo[];

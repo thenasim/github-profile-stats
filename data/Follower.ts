@@ -21,4 +21,4 @@ export type FollowerUser = {
   site_admin: boolean;
 };
 
-export type Followers = Nullable<FollowerUser>[];
+export type Followers = FollowerUser[];

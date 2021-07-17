@@ -8,7 +8,7 @@ import { FiGithub } from "react-icons/fi";
 
 export default function Home() {
   const [username, setUsername] = useState("");
-  const { isError } = useUser(username);
+  const { user, isError, isLoading } = useUser(username);
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
 
@@ -18,7 +18,7 @@ export default function Home() {
     }
   }
 
-  if (username && !isError) {
+  if (user) {
     router.push(`/${username}/stats`);
   }
 
@@ -59,7 +59,7 @@ export default function Home() {
             onClick={handleClick}
             className="px-3 py-2 font-semibold text-white bg-blue-700 rounded-md hover:bg-blue-600 focus:ring-2 focus:ring-blue-400"
           >
-            Submit
+            {isLoading ? "---" : "Submit"}
           </button>
         </div>
       </div>

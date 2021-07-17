@@ -6,12 +6,13 @@ import { fetcher } from "utils/fetcher";
 export function useUser(username: string) {
   const { data, error } = useSWR<User, ErrorData>(
     username ? `https://api.github.com/users/${username}` : null,
-    fetcher
+    fetcher,
+    { dedupingInterval: 5000 }
   );
 
   return {
     user: data,
-    isLoading: !error && !data,
+    isLoading: !error && !data && username,
     isError: error,
   };
 }
