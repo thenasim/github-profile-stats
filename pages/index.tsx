@@ -60,7 +60,7 @@ export default function Home() {
             onClick={handleClick}
             className="px-3 py-2 font-semibold bg-blue-700 border-0 rounded-md text-blue-50 hover:bg-blue-600 focus:ring-2 focus:ring-blue-400"
           >
-            {isLoading ? "---" : "Submit"}
+            {isLoading && username ? "---" : "Submit"}
           </button>
         </div>
       </div>

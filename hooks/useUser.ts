@@ -12,7 +12,7 @@ export function useUser(username: string) {
 
   return {
     user: data,
-    isLoading: !error && !data && username,
+    isLoading: !error && !data,
     isError: error,
   };
 }
