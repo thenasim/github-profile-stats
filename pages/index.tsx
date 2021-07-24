@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 
 import { useUser } from "hooks/useUser";
 import { FiGithub } from "react-icons/fi";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 export default function Home() {
   const [username, setUsername] = useState("");
@@ -58,9 +59,13 @@ export default function Home() {
           </div>
           <button
             onClick={handleClick}
-            className="px-3 py-2 font-semibold bg-blue-700 border-0 rounded-md text-blue-50 hover:bg-blue-600 focus:ring-2 focus:ring-blue-400"
+            className="flex items-center justify-center px-3 py-2 text-base font-semibold bg-blue-700 border-0 rounded-md text-blue-50 hover:bg-blue-600 focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-blue-400"
           >
-            {isLoading && username ? "---" : "Submit"}
+            {isLoading && username ? (
+              <AiOutlineLoading3Quarters className="text-2xl animate-spin" />
+            ) : (
+              "Submit"
+            )}
           </button>
         </div>
       </div>
