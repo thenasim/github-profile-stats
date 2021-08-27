@@ -14,9 +14,9 @@ function Stats() {
   if (isError)
     return (
       <div className="flex items-center justify-center w-full h-screen">
-        <p className="text-3xl text-violet-300">
+        <p className="text-3xl text-[#ff4500]">
           <RiEmotionUnhappyLine className="mx-auto" />
-          {isError.message}
+          User not found
         </p>
       </div>
     );
