@@ -2,7 +2,7 @@
 import React from "react";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
-import type { User } from "data/User";
+import type { User } from "types/User";
 import { AiOutlineLink, AiOutlineTwitter } from "react-icons/ai";
 import { IoLocationOutline } from "react-icons/io5";
 import { BiTimeFive } from "react-icons/bi";

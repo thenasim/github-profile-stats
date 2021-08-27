@@ -1,5 +1,3 @@
-import { Nullable } from "./Nullable";
-
 export type FollowerUser = {
   login: string;
   id: number;

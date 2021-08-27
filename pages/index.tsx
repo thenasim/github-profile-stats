@@ -8,7 +8,7 @@ import { FiGithub } from "react-icons/fi";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 export default function Home() {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState<string | undefined>(undefined);
   const { user, isError, isLoading } = useUser(username);
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
