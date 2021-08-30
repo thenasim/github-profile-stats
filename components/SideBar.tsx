@@ -11,17 +11,16 @@ import { Anchor } from "./Anchor";
 
 interface Props {
   user: User;
-  username: string;
 }
 
-export const SideBar: React.FC<Props> = ({ user, username }) => {
+export const SideBar: React.FC<Props> = ({ user }) => {
   dayjs.extend(relativeTime);
 
   const getShortUrl = (url: string) =>
     url.replace(/^(?:https?:\/\/)?(?:www\.)?/i, "").split("/")[0];
 
   return (
-    <div className="flex border-r border-gray-800 p-7 w-[350px] h-screen sticky flex-col bg-gray-900">
+    <div className="flex flex-shrink-0 border-r border-gray-800 p-7 w-[350px] h-screen sticky flex-col bg-gray-900">
       <div>
         <img
           src={user.avatar_url}
@@ -31,9 +30,9 @@ export const SideBar: React.FC<Props> = ({ user, username }) => {
         <h1 className="mt-3 text-3xl text-center text-gray-200">{user.name}</h1>
         <a
           className="block text-xl font-medium text-center text-blue-500"
-          href={`https://www.github.com/${username}`}
+          href={`https://www.github.com/${user.login}`}
         >
-          @{username}
+          @{user.login}
         </a>
         {user.bio && (
           <p className="mt-3 text-lg leading-tight text-gray-300">{user.bio}</p>
