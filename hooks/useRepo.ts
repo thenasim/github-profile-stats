@@ -7,7 +7,8 @@ export function useRepo(username: string | undefined) {
   const { data, error } = useSWR<Repos, ErrorData>(
     // TODO: Update url to https://api.github.com/users/${username}/repos
 
-    username ? `http://localhost:3004/github` : null,
+    //username ? `http://localhost:3004/github` : null,
+    username ? `https://api.github.com/users/${username}/repos` : null,
     fetcher,
     { dedupingInterval: 5000 }
   );
